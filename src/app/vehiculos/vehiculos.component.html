@@ -1,0 +1,22 @@
+<div class="container mt-3">
+    <h2>Lista de Vehículos</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Placa</th>
+          <th>Marca</th>
+          <th>Color</th>
+          <th>Precio</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let vehiculo of vehiculos">
+          <td>{{ vehiculo.placa }}</td>
+          <td>{{ vehiculo.marca }}</td>
+          <td>{{ vehiculo.color }}</td>
+          <td>{{ vehiculo.precio }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

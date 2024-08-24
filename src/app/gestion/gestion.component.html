@@ -1,0 +1,75 @@
+<div class="container">
+  <h1>Gestión de Vehículos</h1>
+
+  <!-- Barra de búsqueda -->
+  <div class="search-bar">
+    <input 
+      type="text" 
+      [(ngModel)]="busqueda" 
+      (input)="filtrarVehiculos()" 
+      placeholder="Buscar por placa" 
+    />
+  </div>
+
+  <!-- Tabla de vehículos -->
+  <table>
+    <thead>
+      <tr>
+        <th>Placa</th>
+        <th>Marca</th>
+        <th>Color</th>
+        <th>Precio</th>
+        <th>Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let vehiculo of vehiculosFiltrados">
+        <td>{{ vehiculo.placa }}</td>
+        <td>{{ vehiculo.marca }}</td>
+        <td>{{ vehiculo.color }}</td>
+        <td>{{ vehiculo.precio | currency }}</td>
+        <td>
+          <!-- Botón de edición -->
+          <button (click)="editar(vehiculo)">Editar</button>
+          <!-- Botón de eliminación -->
+          <button (click)="eliminar(vehiculo.placa)">Eliminar</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Estilos en CSS para una mejor presentación -->
+<style>
+  .container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+
+  .search-bar {
+    margin-bottom: 20px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+
+  table, th, td {
+    border: 1px solid #ddd;
+  }
+
+  th, td {
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #f4f4f4;
+  }
+
+  button {
+    margin-right: 10px;
+  }
+</style>

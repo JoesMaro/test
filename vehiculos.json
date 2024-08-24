@@ -1,0 +1,26 @@
+{
+    "vehiculos": [
+      {
+        "id": 1,
+        "placa": "PTN380",
+        "marca": "Toyota",
+        "color": "Rojo",
+        "precio": 20000
+      },
+      {
+        "id": 2,
+        "placa": "PBE3176",
+        "marca": "Honda",
+        "color": "Azul",
+        "precio": 22000
+      },
+      {
+        "id": 3,
+        "placa": "IM512B",
+        "marca": "Ford",
+        "color": "Negro",
+        "precio": 25000
+      }
+    ]
+  }
+  
